@@ -8,8 +8,10 @@ pipeline {
             }
         }
         stage('Deploy') {
-            bat "git tag ${BUILD_NUMBER}"
-            bat "git push origin --tags"
+            steps {
+                bat "git tag ${BUILD_NUMBER}"
+                bat "git push origin --tags"
+            }
         }
     }
     post {
