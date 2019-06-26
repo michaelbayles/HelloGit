@@ -5,6 +5,3 @@ class DiagramBlock
 class DitaaBlock
 class PlantUmlBlock
 
-BlockProcessor <|-- DiagramBlock
-DiagramBlock <|-- DitaaBlock
-DiagramBlock <|-- PlantUmlBlock
