@@ -9,6 +9,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                echo "deploying"
                 bat "git tag ${BUILD_NUMBER}"
                 bat "git push origin --tags"
             }
