@@ -1,6 +1,6 @@
 steps:
   - label: "Do something"
-    command: "git remote -v"
+    command: "git fetch origin --tags"
   - label: ":gradle: Gradle build"
     agents:
       environment: 'non-prod'
@@ -11,7 +11,7 @@ steps:
       - docker#v3.2.0:
           image: "620422829213.dkr.ecr.us-east-1.amazonaws.com/ttm-mobile/android-build-image:28.0.3"
           command:
-            - "git remote -v"
+            - "git fetch origin --tags"
           always-pull: true
           environment:
             - "REPO_NAME=maine-custom-controls"
