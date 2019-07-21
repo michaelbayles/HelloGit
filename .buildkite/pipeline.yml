@@ -12,6 +12,7 @@ steps:
           image: "620422829213.dkr.ecr.us-east-1.amazonaws.com/ttm-mobile/android-build-image:28.0.3"
           command:
             - "git fetch origin --tags"
+            - "git describe --tags --abbrev=0 origin/master"
           always-pull: true
           environment:
             - "REPO_NAME=maine-custom-controls"
